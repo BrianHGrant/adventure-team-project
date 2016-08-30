@@ -15,6 +15,9 @@ body {
 nav{
   height: 60px;
   font-size: 30px;
+  background-image: url("/resources/img/flame.gif");
+  background-size: 10%;
+  color: red;
 }
 
 .divider{
@@ -25,17 +28,17 @@ nav{
 }
 
 #dragon {
-    position: relative;
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 10s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+  position: relative;
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 10s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
     0%   {left:0px; top:600px;}
-    100% {left:95%; top:0px;}
+    100% {left:95%; top:-300px;}
 }
