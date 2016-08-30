@@ -17,7 +17,7 @@ import {AboutComponent} from './about.component';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="*"><img src="/resources/img/sword-icon.png" alt="no img found" /></a>
+          <a class="navbar-brand" href="*"><img id="sword" src="/resources/img/sword-icon.png" alt="no img found" /></a>
 
         </div>
 
@@ -35,6 +35,8 @@ import {AboutComponent} from './about.component';
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <div id="dragon"><img src="/resources/img/dragon-animated.gif" alt="no img found" /></div>
     `,
   providers: [ Auth ],
   directives: [ ROUTER_DIRECTIVES ]
