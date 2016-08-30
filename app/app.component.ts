@@ -2,9 +2,11 @@ import { Component } from 'angular2/core';
 import { Auth } from './auth.service';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {AboutComponent} from './about.component';
+import {WeatherComponent} from './weather.component';
 
 @Component({
   selector: 'my-app',
+  directives: [ ROUTER_DIRECTIVES, WeatherComponent ],
   template: `
     <br><br>
     <nav class="navbar navbar-inverse">
@@ -34,21 +36,16 @@ import {AboutComponent} from './about.component';
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
+<my-weather class="pull-right"></my-weather>
     <div><img id="dragon" src="/resources/img/dragon-animated.gif" alt="no img found" /></div>
+
+
     `,
-  providers: [ Auth ],
-  directives: [ ROUTER_DIRECTIVES ]
+  providers: [ Auth ]
 })
 @RouteConfig([
   {path: "/about", name: "About", component: AboutComponent}
 ])
 export class AppComponent {
   constructor(private auth: Auth) {}
-  login() {
-    this.auth.login();
-  }
-  logout() {
-    this.auth.logout();
-  }
 }
